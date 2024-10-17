@@ -26,7 +26,7 @@ export const CommonStyle = StyleSheet.create({
         borderRadius: 8,
         fontWeight: 'bold',
         padding: DIM.deviceHeight * 0.003,
-        paddingHorizontal: DIM.deviceWidth * 0.02,
+        paddingHorizontal: DIM.deviceWidth * 0.04,
         marginStart: DIM.deviceWidth * 0.02,
         fontSize: DIM.deviceHeight * 0.017
     },

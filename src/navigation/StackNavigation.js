@@ -3,6 +3,7 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import PickListScreen from '../screens/PickListScreen';
 import CustomerListScreen from '../screens/CustomerListScreen';
+import ProductListScreen from '../screens/ProductListScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +16,11 @@ const StackNavigation = () => {
                 }}
             />
             <Stack.Screen component={CustomerListScreen} name='CustomerListScreen'
+                options={{
+                    headerShown: false
+                }}
+            />
+            <Stack.Screen component={ProductListScreen} name='ProductListScreen'
                 options={{
                     headerShown: false
                 }}

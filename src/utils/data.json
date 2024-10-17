@@ -1,0 +1,192 @@
+[
+    {
+        "id": "PL001",
+        "salesPerson": "John Due",
+        "status": "open",
+        "date": "14 Jun 2024",
+        "route": "Gandhipuram A1",
+        "customers": [
+            {
+                "id": "customer1",
+                "name": "Customer A",
+                "status": "open",
+                "products": [
+                    {
+                        "id": "product1",
+                        "name": "Product 1",
+                        "itemCode": "87904343",
+                        "quantity": 3,
+                        "total": 10,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    },
+                    {
+                        "id": "product2",
+                        "name": "Product 2",
+                        "itemCode": "55667744",
+                        "quantity": 4,
+                        "total": 10,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    }
+                ]
+            },
+            {
+                "id": "customer2",
+                "name": "Customer B",
+                "status": "open",
+                "products": [
+                    {
+                        "id": "product1",
+                        "name": "Product 1",
+                        "itemCode": "45657687",
+                        "quantity": 2,
+                        "total": 8,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    },
+                    {
+                        "id": "product2",
+                        "name": "Product 2",
+                        "itemCode": "44556633",
+                        "quantity": 1,
+                        "total": 8,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "PL002",
+        "salesPerson": "Jack Dawson",
+        "status": "open",
+        "date": "11 Jun 2024",
+        "route": "Annanagar Road",
+        "customers": [
+            {
+                "id": "customer3",
+                "name": "Customer C",
+                "status": "open",
+                "products": [
+                    {
+                        "id": "product1",
+                        "name": "Product 1",
+                        "itemCode": "55446677",
+                        "quantity": 4,
+                        "total": 8,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    },
+                    {
+                        "id": "product2",
+                        "name": "Product 2",
+                        "itemCode": "55343477",
+                        "quantity": 0,
+                        "total": 8,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    }
+                ]
+            },
+            {
+                "id": "PL003",
+                "salesPerson": "Tony Maativ",
+                "status": "open",
+                "date": "01 Jun 2024",
+                "route": "Alagapuram Road",
+                "products": [
+                    {
+                        "id": "product1",
+                        "name": "Product 1",
+                        "itemCode": "55664433",
+                        "quantity": 6,
+                        "total": 10,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    },
+                    {
+                        "id": "product2",
+                        "name": "Product 2",
+                        "itemCode": "99886699",
+                        "quantity": 4,
+                        "total": 8,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "PL004",
+        "salesPerson": "Jeeva Nantham",
+        "status": "open",
+        "date": "01 Oct 2024",
+        "route": "Ramanugar Road",
+        "customers": [
+            {
+                "id": "customer5",
+                "name": "Customer E",
+                "status": "open",
+                "products": [
+                    {
+                        "id": "product1",
+                        "name": "Product 1",
+                        "itemCode": "55664455",
+                        "quantity": 2,
+                        "total": 8,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    },
+                    {
+                        "id": "product2",
+                        "name": "Product 2",
+                        "itemCode": "88997766",
+                        "quantity": 6,
+                        "total": 10,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    }
+                ]
+            },
+            {
+                "id": "customer6",
+                "name": "Customer F",
+                "products": [
+                    {
+                        "id": "product1",
+                        "name": "Product 1",
+                        "itemCode": "55664433",
+                        "quantity": 1,
+                        "total": 10,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    },
+                    {
+                        "id": "product2",
+                        "name": "Product 2",
+                        "itemCode": "99887766",
+                        "quantity": 6,
+                        "total": 8,
+                        "uom": "Kg",
+                        "div": "ad",
+                        "status": "open"
+                    }
+                ]
+            }
+        ]
+    }
+]

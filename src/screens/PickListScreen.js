@@ -5,20 +5,14 @@ import { Colors, DIM, Images } from '../utils/Constant'
 import SearchContainer from '../components/SearchContainer'
 import { CommonStyle } from '../utils/CommonStyle'
 import { useNavigation } from '@react-navigation/native'
+import { useSelector } from 'react-redux'
+import { statusColor } from '../utils/utilFunctions'
 
 const PickListScreen = () => {
+    const navigation = useNavigation();
+    const pickListData = useSelector(state => state.products.pickList)
 
-    let data = [{
-        name: "PL002",
-        person: "John Doe",
-        route: "Gandhipuram A1",
-        date: '14 Jun 2024',
-        status: 'open'
-    }];
 
-    const navigation = useNavigation()
-
-    const statusColor = (status) => status.toLowerCase() === 'open' ? Colors.oceanBlue : status.toLowerCase() === 'partially' ? Colors.orange : status.toLowerCase() === 'completed' ? Colors.green : Colors.black;
 
     return (
         <View style={{
@@ -36,12 +30,17 @@ const PickListScreen = () => {
                         marginVertical: DIM.deviceHeight * 0.01,
                         fontSize: DIM.deviceHeight * 0.018,
                         color: Colors.black
-                    }}>Today (3)</Text>
-                    <FlatList
-                        data={data}
-                        renderItem={({ item, i }) => <RenderPickList item={item} key={i} statusColor={statusColor} navigation={navigation} />}
-                        keyExtractor={({ item, i }) => i?.toString() || '0'}
-                    />
+                    }}>Today ({pickListData?.length || 0})</Text>
+                    {
+                        pickListData &&
+                            pickListData.length > 0 ? (
+                            <FlatList
+                                data={pickListData}
+                                renderItem={({ item, i }) => <RenderPickList item={item} key={i} navigation={navigation} />}
+                            />
+                        ) : null
+                    }
+
                 </View>
             </View>
         </View>
@@ -49,9 +48,11 @@ const PickListScreen = () => {
 }
 
 
-const RenderPickList = ({ item, key, statusColor, navigation }) => {
+const RenderPickList = ({ item, key, navigation }) => {
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('CustomerListScreen')} key={key}
+        <TouchableOpacity onPress={() => navigation.navigate('CustomerListScreen', {
+            data: item
+        })} key={key}
             style={CommonStyle.flatListContainer}>
             <View>
                 <View style={{
@@ -63,24 +64,24 @@ const RenderPickList = ({ item, key, statusColor, navigation }) => {
                         fontSize: DIM.deviceHeight * 0.02,
                         fontWeight: 'bold',
                         color: Colors.primary,
-                    }}>{item.name}</Text>
+                    }}>{item.id}</Text>
                     <Text style={[CommonStyle.status, {
-                        borderColor: statusColor(item.status),
-                        color: statusColor(item.status),
+                        borderColor: statusColor(item?.status || ""),
+                        color: statusColor(item?.status || ""),
                     }]}>
                         {item.status}
                     </Text>
                 </View>
                 <Text style={{
                     fontSize: DIM.deviceHeight * 0.017,
-                    marginTop: DIM.deviceHeight * 0.003
+                    marginTop: DIM.deviceHeight * 0.0035
                 }}><Text style={{ color: Colors.primary }}>Sales Person : </Text><Text style={{
                     fontWeight: 'bold',
                     color: Colors.black
-                }}>{item.person}</Text></Text>
+                }}>{item.salesPerson}</Text></Text>
                 <Text style={{
                     fontSize: DIM.deviceHeight * 0.017,
-                    marginTop: DIM.deviceHeight * 0.003
+                    marginTop: DIM.deviceHeight * 0.0035
                 }}><Text style={{ color: Colors.primary }}>Route : </Text><Text style={{
                     fontWeight: 'bold',
                     color: Colors.black
