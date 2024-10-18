@@ -12,8 +12,6 @@ const PickListScreen = () => {
     const navigation = useNavigation();
     const pickListData = useSelector(state => state.products.pickList)
 
-
-
     return (
         <View style={{
             flex: 1,

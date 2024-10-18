@@ -1,8 +1,8 @@
+import Toast from "react-native-toast-message";
 import { Colors } from "./Constant";
 
 const statusColor = (status) => status.toLowerCase() === 'open' ? Colors.oceanBlue : status.toLowerCase() === 'partially' ? Colors.orange : status.toLowerCase() === 'completed' ? Colors.green : Colors.black;
 
 
-export {
-    statusColor
-}
+
+export {statusColor};
